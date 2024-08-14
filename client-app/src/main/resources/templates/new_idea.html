@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" data-th-href="@{/css/styles.css}"/>
+</head>
+<body class="bg-zinc-900 text-white">
+<div class="grid min-h-screen">
+    <!-- Section 1-->
+    <section class="h-full bg-zinc-900">
+        <!-- Header -->
+        <header
+                class="mx-auto flex max-w-[1450px] justify-between pt-[12px] lg:px-5 sm:pt-5"
+        >
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="#" class="flex items-center gap-1">
+                    <svg
+                            width="48"
+                            height="48"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                                d="M41.3955 37.5003C42.0875 35.8916 42.5 33.9648 42.5 31.6668C42.5 25.1396 38.6483 20.4059 35.002 17.5792C33.1313 16.1291 30.7352 17.6332 30.7352 20.0001C30.7352 21.6069 30.0135 24.2826 28.5512 26.2528C26.9535 28.4056 24.8904 26.2553 24.746 23.5784C24.68 22.3549 23.4105 21.9217 22.3898 22.5995C20.1573 24.082 17.5 27.0273 17.5 31.6668C17.5 42.3333 25.2778 45.0001 29.1668 45.0001C31.185 45.0001 34.12 44.4501 36.7228 42.8508"
+                                stroke="#EE3145"
+                                stroke-width="4"
+                                stroke-linecap="round"
+                        />
+                        <path
+                                d="M55 30C55 41.785 55 47.6777 51.3387 51.3387C47.6777 55 41.785 55 30 55C18.2149 55 12.3223 55 8.66117 51.3387C5 47.6777 5 41.785 5 30C5 18.2149 5 12.3223 8.66117 8.66117C12.3223 5 18.2149 5 30 5C41.785 5 47.6777 5 51.3387 8.66117C53.7732 11.0955 54.589 14.5164 54.8623 20"
+                                stroke="#3AA1D8"
+                                stroke-width="4"
+                                stroke-linecap="round"
+                        />
+                    </svg>
+
+                    <span class="text-[20px] font-bold leading-[22px] text-white"
+                    >Inspyro</span
+                    >
+                </a>
+            </div>
+            <!-- Menu Desktop -->
+            <nav class="flex items-center sm:hidden">
+                <ul class="flex items-center gap-[40px]">
+                    <li>
+                        <a
+                                data-th-href="@{/}"
+                                class="relative text-[16px] font-[550] leading-[22px] text-teal-400 after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:scale-0 after:bg-white after:transition-transform hover:after:scale-100"
+                        >
+                            Главная</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                                data-th-href="@{/ideas}"
+                                class="relative text-[16px] font-[550] leading-[22px] text-white after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:scale-0 after:bg-white after:transition-transform hover:after:scale-100"
+                        >
+                            Идеи</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                                href="#"
+                                class="relative text-[16px] font-[550] leading-[22px] text-white after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:scale-0 after:bg-white after:transition-transform hover:after:scale-100"
+                        >
+                            Проекты</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                                href="#"
+                                class="relative text-[16px] font-[550] leading-[22px] text-white after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:scale-0 after:bg-white after:transition-transform hover:after:scale-100"
+                        >
+                            Истории</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                                href="#"
+                                class="relative text-[14px] font-medium leading-[22px] text-white after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:scale-0 after:bg-white after:transition-transform hover:after:scale-100"
+                        >
+                            О нас</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Menu mobile -->
+            <nav
+                    id="mobile-menu"
+                    class="fixed bottom-0 left-0 right-0 top-0 hidden items-center justify-center bg-heroGradient"
+            >
+                <ul class="flex flex-col items-center gap-10">
+                    <li>
+                        <a href="#" class="text-xl text-white">Идеи</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-xl text-white">Проекты</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-xl text-white">Истории</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-xl text-white">О нас</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center md:hidden">
+                <a data-th-href="@{/ideas/create}" sec:authorize="!isAuthenticated()" class="flex items-center gap-1">
+                    <svg
+                            width="26"
+                            height="26"
+                            viewBox="0 0 25 25"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                                d="M6.09367 17.8125C6.97909 17.1354 7.96867 16.6016 9.06242 16.2109C10.1562 15.8203 11.302 15.625 12.4999 15.625C13.6978 15.625 14.8437 15.8203 15.9374 16.2109C17.0312 16.6016 18.0208 17.1354 18.9062 17.8125C19.5138 17.1007 19.9869 16.2934 20.3254 15.3906C20.664 14.4879 20.8333 13.5243 20.8333 12.5C20.8333 10.191 20.0216 8.22484 18.3984 6.60157C16.7751 4.97831 14.8089 4.16668 12.4999 4.16668C10.1909 4.16668 8.22474 4.97831 6.60148 6.60157C4.97822 8.22484 4.16659 10.191 4.16659 12.5C4.16659 13.5243 4.33586 14.4879 4.6744 15.3906C5.01294 16.2934 5.48603 17.1007 6.09367 17.8125ZM12.4999 13.5417C11.4756 13.5417 10.6119 13.1901 9.90877 12.487C9.20565 11.7839 8.85409 10.9201 8.85409 9.89584C8.85409 8.87154 9.20565 8.00782 9.90877 7.3047C10.6119 6.60157 11.4756 6.25001 12.4999 6.25001C13.5242 6.25001 14.3879 6.60157 15.0911 7.3047C15.7942 8.00782 16.1458 8.87154 16.1458 9.89584C16.1458 10.9201 15.7942 11.7839 15.0911 12.487C14.3879 13.1901 13.5242 13.5417 12.4999 13.5417ZM12.4999 22.9167C11.0589 22.9167 9.70478 22.6432 8.43742 22.0964C7.17006 21.5495 6.06763 20.8073 5.13013 19.8698C4.19263 18.9323 3.45044 17.8299 2.90356 16.5625C2.35669 15.2951 2.08325 13.941 2.08325 12.5C2.08325 11.059 2.35669 9.70487 2.90356 8.43751C3.45044 7.17015 4.19263 6.06772 5.13013 5.13022C6.06763 4.19272 7.17006 3.45053 8.43742 2.90366C9.70478 2.35678 11.0589 2.08334 12.4999 2.08334C13.9409 2.08334 15.2951 2.35678 16.5624 2.90366C17.8298 3.45053 18.9322 4.19272 19.8697 5.13022C20.8072 6.06772 21.5494 7.17015 22.0963 8.43751C22.6431 9.70487 22.9166 11.059 22.9166 12.5C22.9166 13.941 22.6431 15.2951 22.0963 16.5625C21.5494 17.8299 20.8072 18.9323 19.8697 19.8698C18.9322 20.8073 17.8298 21.5495 16.5624 22.0964C15.2951 22.6432 13.9409 22.9167 12.4999 22.9167Z"
+                                fill="#2DD4BF"
+                        />
+                    </svg>
+                    <span class="text-[16px] font-[550] leading-[22px] text-teal-400"
+                    >Войти</span
+                    >
+                </a>
+                <form method="POST" data-th-action="@{/logout}" id="logoutForm" sec:authorize="isAuthenticated()">
+                    <input class="text-[16px] font-[550] leading-[22px] text-teal-400" type="submit"
+                           value="Logout"/>
+                </form>
+            </div>
+
+            <!-- Burger menu -->
+            <button
+                    id="burger"
+                    class="group relative hidden h-[21px] w-[25px] sm:block"
+            >
+            <span
+                    class="absolute left-0 top-0 h-[3px] w-full rounded-lg bg-white transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45"
+            ></span>
+                <span
+                        class="absolute left-0 top-[9px] h-[3px] w-full rounded-lg bg-white transition-opacity group-[.active]:opacity-0"
+                ></span>
+                <span
+                        class="absolute bottom-0 left-0 h-[3px] w-full rounded-lg bg-white transition-transform group-[.active]:-translate-y-[10px] group-[.active]:-rotate-45"
+                ></span>
+            </button>
+        </header>
+
+        <!-- Animated bg -->
+
+        <!-- Section 1-->
+        <section>
+            <div class="pb-24 pt-16">
+                <div
+                        class="mx-auto flex min-h-[600px] flex-col items-center justify-center px-6 py-8"
+                >
+                    <div
+                            class="xl:p-0 w-full max-w-md rounded-lg border border-zinc-700 bg-zinc-800 shadow"
+                    >
+                        <div class="space-y-4 p-6">
+                            <h1
+                                    class="text-xl font-bold leading-tight tracking-tight text-white"
+                            >
+                                Расскажи о своей идее!
+                            </h1>
+                            <h2 class="leading-tight tracking-tight text-teal-400">Допущены ошибки</h2>
+                            <ul>
+                                <li data-th-each="errors: ${errors}" data-th-text="${errors}"></li>
+                            </ul>
+                            <form class="space-y-4" method="post" data-th-action="@{/ideas/create}">
+                                <div>
+                                    <label
+                                            class="mb-2 block text-sm font-medium text-white"
+                                    >Название</label
+                                    >
+                                    <input
+                                            type="text"
+                                            name="title"
+                                            class="block w-full rounded-lg border   p-2.5  border-zinc-600 bg-zinc-700 text-white placeholder-zinc-400 focus:border-blue-500 focus:ring-blue-500"
+                                            placeholder="Жесть крутая идея"
+                                            data-th-value="${payload?.title}"
+                                            required=""
+                                    />
+                                </div>
+                                <div>
+                                    <label
+                                            class="mb-2 block text-sm font-medium dark:text-white"
+                                    >Описание</label
+                                    >
+                                    <textarea
+                                            name="description"
+                                            data-th-text="${payload?.description}"
+                                            class="block w-full rounded-lg border   p-2.5  border-zinc-600 bg-zinc-700 text-white placeholder-zinc-400 focus:border-blue-500 focus:ring-blue-500"
+                                            required=""
+                                    ></textarea>
+                                </div>
+                                <button
+                                        type="submit"
+                                        class="bg-teal-400 hover:bg-teal-500 focus:ring-teal-800 w-full rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                                >
+                                    Добавить
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <footer class="border-t border-zinc-800 bg-zinc-800/30 py-6">
+        <div class="mx-auto max-w-[1450px]">
+            <div class="flex justify-between">
+                <div class="max-w-[340px]">
+                    <div class="flex items-center gap-1">
+                        <svg
+                                width="48"
+                                height="48"
+                                viewBox="0 0 60 60"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                    d="M41.3955 37.5003C42.0875 35.8916 42.5 33.9648 42.5 31.6668C42.5 25.1396 38.6483 20.4059 35.002 17.5792C33.1313 16.1291 30.7352 17.6332 30.7352 20.0001C30.7352 21.6069 30.0135 24.2826 28.5512 26.2528C26.9535 28.4056 24.8904 26.2553 24.746 23.5784C24.68 22.3549 23.4105 21.9217 22.3898 22.5995C20.1573 24.082 17.5 27.0273 17.5 31.6668C17.5 42.3333 25.2778 45.0001 29.1668 45.0001C31.185 45.0001 34.12 44.4501 36.7228 42.8508"
+                                    stroke="#EE3145"
+                                    stroke-width="4"
+                                    stroke-linecap="round"
+                            />
+                            <path
+                                    d="M55 30C55 41.785 55 47.6777 51.3387 51.3387C47.6777 55 41.785 55 30 55C18.2149 55 12.3223 55 8.66117 51.3387C5 47.6777 5 41.785 5 30C5 18.2149 5 12.3223 8.66117 8.66117C12.3223 5 18.2149 5 30 5C41.785 5 47.6777 5 51.3387 8.66117C53.7732 11.0955 54.589 14.5164 54.8623 20"
+                                    stroke="#3AA1D8"
+                                    stroke-width="4"
+                                    stroke-linecap="round"
+                            />
+                        </svg>
+                        <span class="text-[20px] font-bold leading-[22px] text-white"
+                        >Inspyro</span
+                        >
+                    </div>
+                    <p class="text-zinc-300">
+                        <a href="#" class="text-white">Open-source</a> платформа для
+                        размещения своих работ и идей.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script data-th-src="@{/js/main.js}"></script>
+</body>
+</html>

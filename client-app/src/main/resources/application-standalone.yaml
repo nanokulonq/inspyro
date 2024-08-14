@@ -1,0 +1,15 @@
+inspyro:
+  services:
+    ideas:
+      uri: http://localhost:8081
+      username: ideas_service_user
+      password: password
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/users
+    username: user
+    password: user
+  flyway:
+    schemas:
+      - public
+      - user_management

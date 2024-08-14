@@ -1,0 +1,22 @@
+spring:
+  security:
+    user:
+      name: ideas_service_user
+      password: password
+      roles:
+        - SERVICE
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ideas
+    username: ideas
+    password: ideas
+  flyway:
+    schemas:
+      - public
+      - ideas
+  jpa:
+    show-sql: true
+server:
+  port: 8081
+logging:
+  level:
+    sql: info
