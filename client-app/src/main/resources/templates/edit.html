@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Редактирование идеи &laquo;[[${idea.title}]]&raquo; &ndash; Inspyro</title>
-</head>
-<body>
-<a data-th-href="@{/ideas/{ideaId}(ideaId=${idea.id})}">&larr; К идеи</a>
-<h1>Редактирование идеи &laquo;[[${idea.title}]]&raquo;</h1>
-<div data-th-if="${errors}">
-    <h2>Допущены ошибки</h2>
-    <ul>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Редактирование идеи &laquo;[[${idea.title}]]&raquo; &ndash; Inspyro
+    </title>
+  </head>
+  <body>
+    <a data-th-href="@{/ideas/{ideaId}(ideaId=${idea.id})}">&larr; К идеи</a>
+    <h1>Редактирование идеи &laquo;[[${idea.title}]]&raquo;</h1>
+    <div data-th-if="${errors}">
+      <h2>Допущены ошибки</h2>
+      <ul>
         <li data-th-each="errors: ${errors}" data-th-text="${errors}"></li>
-    </ul>
-</div>
-<form method="post" data-th-action="@{/ideas/{ideasId}/edit(ideasId=${idea.id})}">
-    <label>
-        Название:<br>
-        <input type="text" name="title" data-th-value="${payload != null ? payload.title : idea.title}">
-    </label><br>
-    <label>
-        Описание:<br>
-        <textarea name="description" data-th-text="${payload != null ? payload.description : idea.description}"></textarea>
-    </label><br>
-    <button type="submit">Изменить</button>
-</form>
-</body>
+      </ul>
+    </div>
+    <form
+      method="post"
+      data-th-action="@{/ideas/{ideasId}/edit(ideasId=${idea.id})}">
+      <label>
+        Название:<br />
+        <input
+          type="text"
+          name="title"
+          data-th-value="${payload != null ? payload.title : idea.title}" /> </label
+      ><br />
+      <label>
+        Описание:<br />
+        <textarea
+          name="description"
+          data-th-text="${payload != null ? payload.description : idea.description}"></textarea></label
+      ><br />
+      <button type="submit">Изменить</button>
+    </form>
+  </body>
 </html>

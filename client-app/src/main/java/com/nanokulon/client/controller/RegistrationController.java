@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 @RequestMapping("/register")
 public class RegistrationController {
-
     private final InspyroUserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
@@ -27,7 +26,8 @@ public class RegistrationController {
     }
 
     @PostMapping
-    public String registerUser(NewUserPayload payload, Errors errors, Model model) {
+    public String registerUser(NewUserPayload payload, Errors errors,
+                               Model model) {
         try {
             this.userRepository.save(new InspyroUser(null, payload.username(),
                     this.passwordEncoder.encode(payload.password()), null));
