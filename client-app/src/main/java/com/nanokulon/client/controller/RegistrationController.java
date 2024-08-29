@@ -3,6 +3,7 @@ package com.nanokulon.client.controller;
 import com.nanokulon.client.controller.payload.NewUserPayload;
 import com.nanokulon.client.entity.InspyroUser;
 import com.nanokulon.client.repository.InspyroUserRepository;
+import com.nanokulon.client.service.RegistrationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -17,8 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 @RequestMapping("/register")
 public class RegistrationController {
-    private final InspyroUserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
+    private final RegistrationService registrationService;
 
     @GetMapping
     public String registerForm() {
@@ -29,8 +29,7 @@ public class RegistrationController {
     public String registerUser(NewUserPayload payload, Errors errors,
                                Model model) {
         try {
-            this.userRepository.save(new InspyroUser(null, payload.username(),
-                    this.passwordEncoder.encode(payload.password()), null));
+            this.registrationService.register(payload);
             return "redirect:/";
         } catch (DataIntegrityViolationException exception) {
             model.addAttribute("errors", exception.getLocalizedMessage());

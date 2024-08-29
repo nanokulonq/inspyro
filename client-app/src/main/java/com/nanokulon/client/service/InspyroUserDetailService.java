@@ -1,4 +1,4 @@
-package com.nanokulon.client.security;
+package com.nanokulon.client.service;
 
 import com.nanokulon.client.entity.Authority;
 import com.nanokulon.client.repository.InspyroUserRepository;
